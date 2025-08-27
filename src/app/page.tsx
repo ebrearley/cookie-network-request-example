@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
 import { createApi } from "unsplash-js";
 import { Random } from "unsplash-js/dist/methods/photos/types";
 
@@ -33,7 +32,8 @@ export default function Home() {
   return (
     <main className="flex flex-wrap gap-4">
       {photos.map((photo) => (
-        <Image
+        <img
+          className="object-cover"
           key={photo.id}
           width={100}
           height={100}
